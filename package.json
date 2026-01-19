@@ -2,7 +2,7 @@
   "name": "test-blog",
   "private": true,
   "scripts": {
-    "start": "node node_modules/scribere/scripts/start.js",
+    "start": "node scripts/start-local.js",
     "build": "node node_modules/scribere/scripts/build.js",
     "rebuild": "node node_modules/scribere/scripts/rebuild.js",
     "new": "node node_modules/scribere/scripts/new.js",
