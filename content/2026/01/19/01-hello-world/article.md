@@ -9,7 +9,7 @@ tags:
 # Hello World: My First Scribere Post
 By Karmen Hardy
 
-Welcome to my newly launched blog. This is the first post I've written since setting up the Scribere engine and the automated GitHub Pages deployment.
+Welcome to my newly launched blog. This is the first post I've written since setting up the Scribere engine and the automated GitHub Pages deployment!
 
 The setup was smooth, and now I can write posts in plain Markdown and have them live in minutes. 
 
