@@ -1,8 +1,8 @@
 :root {
   --color-bg: #fff0f6;
   /* Soft Lavender Pink */
-  --color-text: #2d0a15;
-  /* Very Dark Burgundy */
+  --color-text: #6b305e;
+  /* Warm Plum Purple */
   --color-muted: #8d6f96;
   /* Dusty Mauve */
   --color-border: #f8dae9;
@@ -11,7 +11,7 @@
   /* Vibrant Red/Pink Highlight */
   --color-code-bg: #fff9fb;
   --color-code-border: #f8dae9;
-  --color-code-text: #2d0a15;
+  --color-code-text: #6b305e;
   --color-inline-code-bg: #ffebf3;
   --color-lint-bg: #fff4f4;
   --color-lint-border: #f0b4b4;
@@ -23,8 +23,8 @@
   :root {
     --color-bg: #1a050b;
     /* Deep Night Burgundy */
-    --color-text: #ffe5ec;
-    /* Light Pinkish Text */
+    --color-text: #fbc6d9;
+    /* Warm Light Rose */
     --color-muted: #bc8a9d;
     /* Muted Rose */
     --color-border: #3d000e;
@@ -33,8 +33,8 @@
     /* Bright Salmon/Red Accent */
     --color-code-bg: #120004;
     --color-code-border: #3d000e;
-    --color-code-text: #ffe5ec;
-    --color-inline-code-bg: #2d0a15;
+    --color-code-text: #fbc6d9;
+    --color-inline-code-bg: #3d1a34;
     --color-lint-bg: #2a1515;
     --color-lint-border: #5a2a2a;
     --color-lint-text: #f1b4b4;
