@@ -1,12 +1,18 @@
 :root {
-  --color-bg: #fff;
-  --color-text: #111;
-  --color-muted: #4a4a4a;
-  --color-border: #e2e2e2;
-  --color-code-bg: #f6f6f6;
-  --color-code-border: #e0e0e0;
-  --color-code-text: #1a1a1a;
-  --color-inline-code-bg: #f2f2f2;
+  --color-bg: #fff0f6;
+  /* Soft Lavender Pink */
+  --color-text: #2d0a15;
+  /* Very Dark Burgundy */
+  --color-muted: #8d6f96;
+  /* Dusty Mauve */
+  --color-border: #f8dae9;
+  /* Light Pinkish Border */
+  --color-accent: #ff4d6d;
+  /* Vibrant Red/Pink Highlight */
+  --color-code-bg: #fff9fb;
+  --color-code-border: #f8dae9;
+  --color-code-text: #2d0a15;
+  --color-inline-code-bg: #ffebf3;
   --color-lint-bg: #fff4f4;
   --color-lint-border: #f0b4b4;
   --color-lint-text: #7a1f1f;
@@ -15,14 +21,20 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #121212;
-    --color-text: #f5f5f5;
-    --color-muted: #b6b6b6;
-    --color-border: #2c2c2c;
-    --color-code-bg: #1a1a1a;
-    --color-code-border: #2f2f2f;
-    --color-code-text: #f5f5f5;
-    --color-inline-code-bg: #202020;
+    --color-bg: #1a050b;
+    /* Deep Night Burgundy */
+    --color-text: #ffe5ec;
+    /* Light Pinkish Text */
+    --color-muted: #bc8a9d;
+    /* Muted Rose */
+    --color-border: #3d000e;
+    /* Deep Crimson Border */
+    --color-accent: #ff758f;
+    /* Bright Salmon/Red Accent */
+    --color-code-bg: #120004;
+    --color-code-border: #3d000e;
+    --color-code-text: #ffe5ec;
+    --color-inline-code-bg: #2d0a15;
     --color-lint-bg: #2a1515;
     --color-lint-border: #5a2a2a;
     --color-lint-text: #f1b4b4;
@@ -91,8 +103,14 @@ img {
 }
 
 a {
-  color: inherit;
+  color: var(--color-accent);
   text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  filter: brightness(1.2);
 }
 
 a:focus {
@@ -194,8 +212,8 @@ main h1:first-child {
   padding: 0;
 }
 
-.page-article :not(pre) > code,
-.article-entry :not(pre) > code {
+.page-article :not(pre)>code,
+.article-entry :not(pre)>code {
   background: var(--color-inline-code-bg);
   border: 1px solid var(--color-code-border);
   border-radius: 0.25rem;
@@ -293,7 +311,7 @@ main h1:first-child {
   margin: 0;
 }
 
-.lint-item + .lint-item {
+.lint-item+.lint-item {
   margin-top: 1.5rem;
 }
 
@@ -311,14 +329,14 @@ main h1:first-child {
   padding-left: 1.2rem;
 }
 
-.article-entry > h1 {
+.article-entry>h1 {
   margin-top: 0.5em;
 }
 
-.summary-item + .summary-item,
-.archive-years li + li,
-.tag-year-list li + li,
-.index-list li + li {
+.summary-item+.summary-item,
+.archive-years li+li,
+.tag-year-list li+li,
+.index-list li+li {
   margin-top: 1rem;
 }
 
