@@ -19,10 +19,10 @@
             snowflakes.push({
                 x: Math.random() * width,
                 y: Math.random() * height,
-                radius: Math.random() * 3 + 1, // Larger flakes
+                radius: Math.random() * 4 + 1.5, // Even larger flakes
                 speed: Math.random() * 1 + 0.5,
                 wind: Math.random() * 0.5 - 0.25,
-                opacity: Math.random() * 0.4 + 0.5 // Higher minimum opacity
+                opacity: Math.random() * 0.2 + 0.8 // Very high opacity (0.8 - 1.0)
             });
         }
     }
