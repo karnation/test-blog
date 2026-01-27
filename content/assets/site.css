@@ -7,7 +7,7 @@
   /* Dusty Mauve */
   --color-border: #f8dae9;
   /* Light Pinkish Border */
-  --color-accent: #ff4d6d;
+  --color-accent: #971d35;
   /* Vibrant Red/Pink Highlight */
   --color-code-bg: #fff9fb;
   --color-code-border: #f8dae9;
@@ -15,7 +15,7 @@
   --color-inline-code-bg: #ffebf3;
   --color-lint-bg: #fff4f4;
   --color-lint-border: #f0b4b4;
-  --color-lint-text: #7a1f1f;
+  --color-lint-text: #8e0f28;
   --content-width: 64ch;
 }
 
@@ -380,4 +380,5 @@ main h1:first-child {
   height: 100vh;
   pointer-events: none;
   z-index: 9999;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9));
 }
