@@ -26,34 +26,33 @@
             });
         }
     }
-}
 
     function draw() {
-    ctx.clearRect(0, 0, width, height);
-    for (let flake of snowflakes) {
-        ctx.fillStyle = `rgba(255, 255, 255, ${flake.opacity})`;
-        ctx.beginPath();
-        ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
-        ctx.fill();
-    }
-    update();
-    requestAnimationFrame(draw);
-}
-
-function update() {
-    for (let flake of snowflakes) {
-        flake.y += flake.speed;
-        flake.x += flake.wind;
-        if (flake.y > height) {
-            flake.y = -flake.radius;
-            flake.x = Math.random() * width;
+        ctx.clearRect(0, 0, width, height);
+        for (let flake of snowflakes) {
+            ctx.fillStyle = `rgba(255, 255, 255, ${flake.opacity})`;
+            ctx.beginPath();
+            ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+            ctx.fill();
         }
-        if (flake.x > width) flake.x = 0;
-        if (flake.x < 0) flake.x = width;
+        update();
+        requestAnimationFrame(draw);
     }
-}
 
-window.addEventListener('resize', init);
-init();
-draw();
-}) ();
+    function update() {
+        for (let flake of snowflakes) {
+            flake.y += flake.speed;
+            flake.x += flake.wind;
+            if (flake.y > height) {
+                flake.y = -flake.radius;
+                flake.x = Math.random() * width;
+            }
+            if (flake.x > width) flake.x = 0;
+            if (flake.x < 0) flake.x = width;
+        }
+    }
+
+    window.addEventListener('resize', init);
+    init();
+    draw();
+})();
