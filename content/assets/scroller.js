@@ -14,7 +14,9 @@
 
         // Add fish image
         const fish = document.createElement('img');
-        fish.src = '/assets/1fish.PNG';
+        const scriptTag = document.currentScript;
+        const assetBase = scriptTag ? scriptTag.src.substring(0, scriptTag.src.lastIndexOf('/') + 1) : '/assets/';
+        fish.src = assetBase + '1fish.PNG';
         fish.alt = '';
         btn.appendChild(fish);
 

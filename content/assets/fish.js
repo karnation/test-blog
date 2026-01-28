@@ -84,9 +84,12 @@
     }
 
     // Load all images
+    const scriptTag = document.currentScript;
+    const assetBase = scriptTag ? scriptTag.src.substring(0, scriptTag.src.lastIndexOf('/') + 1) : '/assets/';
+
     fishFiles.forEach((file, index) => {
         const img = new Image();
-        img.src = '/assets/' + file;
+        img.src = assetBase + file;
         img.onload = () => {
             loadedImages++;
             fishImages.push(img);
