@@ -47,7 +47,10 @@
     }
 
     function draw() {
-        ctx.clearRect(0, 0, width, height);
+        // Must fill with white for mix-blend-mode: difference to correctly 
+        // invert the inverted logo back to its original colors.
+        ctx.fillStyle = 'white';
+        ctx.fillRect(0, 0, width, height);
         if (!fishes) return;
 
         for (let fish of fishes) {
