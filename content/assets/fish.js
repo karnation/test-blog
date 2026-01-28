@@ -1,8 +1,11 @@
 (function () {
     const canvas = document.createElement('canvas');
     canvas.id = 'fish-canvas';
-    // Insert at the beginning of body so it stays behind other elements
-    document.body.prepend(canvas);
+    // Insert at the beginning of the .page element (or body as fallback)
+    // This puts the canvas in the same stacking context as the content,
+    // which allows mix-blend-mode (difference) to work correctly.
+    const target = document.querySelector('.page') || document.body;
+    target.prepend(canvas);
     const ctx = canvas.getContext('2d');
 
     let width, height, fishes;
