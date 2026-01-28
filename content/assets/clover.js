@@ -1,6 +1,6 @@
 // Generate repeating clovers for left and right borders
 (function () {
-    const cloverSrc = '/assets/clover.png';
+    const cloverSrc = '/assets/transparent-clover.PNG';
     const cloverSize = 66.67; // px
     const viewportHeight = window.innerHeight;
     const cloversNeeded = Math.ceil(viewportHeight / cloverSize) + 2; // Extra for scrolling
