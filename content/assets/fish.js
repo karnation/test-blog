@@ -47,10 +47,7 @@
     }
 
     function draw() {
-        // Must fill with white for mix-blend-mode: difference to correctly 
-        // invert the inverted logo back to its original colors.
-        ctx.fillStyle = 'white';
-        ctx.fillRect(0, 0, width, height);
+        ctx.clearRect(0, 0, width, height);
         if (!fishes) return;
 
         for (let fish of fishes) {
@@ -100,6 +97,11 @@
     if (logo) {
         logo.src = assetBase + 'doctornowhere.jpg';
         console.log('Logo path fixed to:', logo.src);
+
+        // Toggle inversion on mouseenter
+        logo.addEventListener('mouseenter', () => {
+            logo.classList.toggle('is-inverted');
+        });
     }
 
     fishFiles.forEach((file, index) => {
