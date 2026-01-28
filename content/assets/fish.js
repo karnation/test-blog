@@ -83,16 +83,28 @@
         }
     }
 
+    console.log('Fish background script initialized');
     // Load all images
     const scriptTag = document.currentScript;
     const assetBase = scriptTag ? scriptTag.src.substring(0, scriptTag.src.lastIndexOf('/') + 1) : '/assets/';
+    console.log('Fish assets base path detected as:', assetBase);
 
     fishFiles.forEach((file, index) => {
         const img = new Image();
         img.src = assetBase + file;
         img.onload = () => {
+            console.log('Successfully loaded fish:', file);
             loadedImages++;
             fishImages.push(img);
+            if (loadedImages === fishFiles.length) {
+                console.log('All fish images loaded. Initializing animation.');
+                init();
+                draw();
+            }
+        };
+        img.onerror = () => {
+            console.error('FAILED to load fish image:', file, 'from', img.src);
+            loadedImages++;
             if (loadedImages === fishFiles.length) {
                 init();
                 draw();
