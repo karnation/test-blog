@@ -163,9 +163,9 @@ main,
   width: 100%;
   height: auto;
   object-fit: contain;
-  /* Use multiply to appear normal on white background 
-     but blend with the colors of the fish beneath it */
-  mix-blend-mode: multiply;
+  /* Use difference to appear inverted on white background 
+     but revert to original colors when dark fish pass behind */
+  mix-blend-mode: difference;
   opacity: 0.8;
 }
 
