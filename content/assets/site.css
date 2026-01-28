@@ -165,10 +165,12 @@ main,
   width: 100%;
   height: auto;
   object-fit: contain;
-  /* Use difference to appear inverted on white background 
-     but revert to original colors when dark fish pass behind */
+  /* Use invert + difference to appear NORMAL on white background 
+     but create an INVERTED effect when dark fish pass behind */
+  filter: invert(1);
   mix-blend-mode: difference;
-  opacity: 0.8;
+  opacity: 1;
+  /* Increased opacity for clearer effect */
 }
 
 .site-mark:focus-visible {
