@@ -483,3 +483,26 @@ main h1:first-child {
   z-index: 9999;
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9));
 }
+
+#clover {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+  z-index: 5;
+  mix-blend-mode: multiply;
+  animation: choppy-spin 3s steps(12) infinite;
+}
+
+@keyframes choppy-spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
