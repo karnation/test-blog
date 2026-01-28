@@ -509,6 +509,8 @@ main h1:first-child {
 .clover-right img {
   width: 66.67px;
   height: 66.67px;
+  mix-blend-mode: multiply;
+  filter: brightness(1.1) contrast(1.2);
   animation: choppy-spin 3s steps(12) infinite;
 }
 
