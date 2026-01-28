@@ -92,6 +92,13 @@
     const assetBase = scriptTag ? scriptTag.src.substring(0, scriptTag.src.lastIndexOf('/') + 1) : '/assets/';
     console.log('Fish assets base path detected as:', assetBase);
 
+    // Fix the logo path dynamically for subdirectory deployments
+    const logo = document.getElementById('site-logo');
+    if (logo) {
+        logo.src = assetBase + 'doctornowhere.jpg';
+        console.log('Logo path fixed to:', logo.src);
+    }
+
     fishFiles.forEach((file, index) => {
         const img = new Image();
         img.src = assetBase + file;
