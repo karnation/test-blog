@@ -299,7 +299,7 @@ main h1:first-child {
   backdrop-filter: blur(5px);
   position: relative;
   /* Position relative for the next button */
-  scroll-margin-top: 2.5rem;
+  scroll-margin-top: 5rem;
 }
 
 .next-article-btn {
