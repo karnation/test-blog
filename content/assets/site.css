@@ -341,7 +341,8 @@ main h1:first-child {
   pointer-events: none;
   opacity: 0;
   /* Hidden by default */
-  transform: translateX(6px);
+  transform: translateX(10px);
+  margin-left: 10px;
   transition: all 0.3s ease;
 }
 
@@ -355,7 +356,7 @@ main h1:first-child {
 }
 
 .next-article-btn:hover span {
-  transform: scale(1.1) translateX(6px);
+  transform: scale(1.1) translateX(10px);
   opacity: 1;
   /* Show on hover */
 }
