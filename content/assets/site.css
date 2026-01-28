@@ -484,25 +484,41 @@ main h1:first-child {
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9));
 }
 
-#clover {
+.clover-left,
+.clover-right {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
+  top: 0;
+  width: 66.67px;
+  height: 100vh;
   pointer-events: none;
   z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.clover-left {
+  left: 2px;
+}
+
+.clover-right {
+  right: 2px;
+}
+
+.clover-left img,
+.clover-right img {
+  width: 66.67px;
+  height: 66.67px;
   mix-blend-mode: multiply;
   animation: choppy-spin 3s steps(12) infinite;
 }
 
 @keyframes choppy-spin {
   from {
-    transform: translate(-50%, -50%) rotate(0deg);
+    transform: rotate(0deg);
   }
 
   to {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: rotate(360deg);
   }
 }
