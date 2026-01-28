@@ -167,6 +167,7 @@ main,
      but create a difference effect when fish pass behind */
   filter: invert(1);
   mix-blend-mode: difference;
+  opacity: 0.8;
 }
 
 .site-mark:focus-visible {
