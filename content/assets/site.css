@@ -163,6 +163,10 @@ main,
   width: 100%;
   height: auto;
   object-fit: contain;
+  /* Use invert + difference to appear normal on white background 
+     but create a difference effect when fish pass behind */
+  filter: invert(1);
+  mix-blend-mode: difference;
 }
 
 .site-mark:focus-visible {
