@@ -509,7 +509,7 @@ main h1:first-child {
 .clover-right img {
   width: 66.67px;
   height: 66.67px;
-  animation: choppy-spin 3s steps(12) infinite;
+  animation: choppy-spin 6s steps(12) infinite;
 }
 
 @keyframes choppy-spin {
