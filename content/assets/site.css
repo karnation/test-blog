@@ -143,6 +143,7 @@ a:focus-visible {
   text-align: center;
   gap: 0.5rem;
   margin-bottom: 2.25rem;
+  background: transparent !important;
 }
 
 .site-header,
