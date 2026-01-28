@@ -160,6 +160,10 @@ main,
   margin: 0 auto;
 }
 
+.site-mark:hover {
+  background: transparent;
+}
+
 .site-mark img {
   display: block;
   width: 100%;
