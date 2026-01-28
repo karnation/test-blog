@@ -492,7 +492,7 @@ main h1:first-child {
   width: 200px;
   height: 200px;
   pointer-events: none;
-  z-index: 5;
+  z-index: 100;
   mix-blend-mode: multiply;
   animation: choppy-spin 3s steps(12) infinite;
 }
