@@ -1,6 +1,8 @@
 (function () {
     const articles = Array.from(document.querySelectorAll('.article-entry'));
 
+    const buttonFishes = ['1fish.PNG', '3fish.PNG', '5fish.PNG'];
+
     articles.forEach((article, index) => {
         // No "Next" button on the last article
         if (index === articles.length - 1) return;
@@ -16,7 +18,10 @@
         const fish = document.createElement('img');
         const scriptTag = document.currentScript;
         const assetBase = scriptTag ? scriptTag.src.substring(0, scriptTag.src.lastIndexOf('/') + 1) : '/assets/';
-        fish.src = assetBase + '1fish.PNG';
+
+        // Alternate between 1, 3, 5 fish. Simple modulo ensures no repeats.
+        const fishFile = buttonFishes[index % buttonFishes.length];
+        fish.src = assetBase + fishFile;
         fish.alt = '';
         btn.appendChild(fish);
 
