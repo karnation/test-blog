@@ -160,6 +160,17 @@ main,
   justify-content: center;
   gap: 4px;
   width: 100%;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .clover-toggle {
+    position: absolute;
+    left: 50%;
+    margin-left: 35px;
+    top: 1px;
+    z-index: 20;
+  }
 }
 
 .site-mark {
