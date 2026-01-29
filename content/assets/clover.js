@@ -39,7 +39,18 @@
         }
 
         toggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('animations-paused');
+            const body = document.body;
+            if (!body.classList.contains('animations-paused') && !body.classList.contains('clovers-hidden')) {
+                // State 0 -> State 1: Pause
+                body.classList.add('animations-paused');
+            } else if (body.classList.contains('animations-paused') && !body.classList.contains('clovers-hidden')) {
+                // State 1 -> State 2: Hide (keep paused so button doesn't spin)
+                body.classList.add('clovers-hidden');
+            } else {
+                // State 2 (or mixed) -> State 0: Reset
+                body.classList.remove('animations-paused');
+                body.classList.remove('clovers-hidden');
+            }
         });
     }
 })();

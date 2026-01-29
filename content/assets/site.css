@@ -198,6 +198,15 @@ body.animations-paused .clover-toggle img {
   animation-play-state: paused;
 }
 
+body.clovers-hidden .clover-left,
+body.clovers-hidden .clover-right {
+  display: none;
+}
+
+body.clovers-hidden .clover-toggle img {
+  filter: hue-rotate(180deg);
+}
+
 .site-mark:hover {
   background: transparent;
 }
