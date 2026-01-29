@@ -185,12 +185,13 @@ main,
   top: 1px;
   left: 50%;
   /* 
+  /* 
      Clamp Logic:
      MIN: 35px (Overlap point on very small screens)
-     VAL: 50vw - 80px (Reaches max gap at 400px viewport width)
-     MAX: 120px (Standard desktop gap ~13.5px)
+     VAL: 50vw - 150px (Ensures button stays clear of the 67px side border with buffer)
+     MAX: 112px (Standard desktop gap next to logo)
   */
-  margin-left: clamp(35px, calc(50vw - 80px), 120px);
+  margin-left: clamp(35px, calc(50vw - 150px), 112px);
   z-index: 20;
 }
 
@@ -454,14 +455,6 @@ main h1:first-child {
     opacity: 1;
     /* Show on hover */
   }
-}
-
-.next-article-btn:active {
-  transform: scale(0.95);
-}
-
-.next-article-btn:active img {
-  filter: drop-shadow(0 0 10px rgba(255, 77, 109, 0.6));
 }
 
 
