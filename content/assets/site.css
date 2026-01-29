@@ -156,15 +156,17 @@ main,
 
 .site-branding-wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 4px;
   width: 100%;
 }
 
 .site-mark {
   display: block;
   width: min(213px, 92vw);
+  margin: 0;
+  padding: 0;
   /* removed auto margins as flex handles centering */
 }
 
@@ -176,6 +178,8 @@ main,
   width: 66.67px;
   height: 66.67px;
   transition: transform 0.2s ease;
+  margin-top: 2px;
+  flex-shrink: 0;
 }
 
 .clover-toggle:hover {
