@@ -154,10 +154,48 @@ main,
   margin-right: auto;
 }
 
+.site-branding-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
 .site-mark {
   display: block;
   width: min(213px, 92vw);
-  margin: 0 auto;
+  /* removed auto margins as flex handles centering */
+}
+
+.clover-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 66.67px;
+  height: 66.67px;
+  transition: transform 0.2s ease;
+}
+
+.clover-toggle:hover {
+  transform: scale(1.1);
+}
+
+.clover-toggle:active {
+  transform: scale(0.95);
+}
+
+.clover-toggle img {
+  width: 100%;
+  height: 100%;
+  animation: choppy-spin 6s steps(12) infinite;
+}
+
+body.animations-paused .clover-left img,
+body.animations-paused .clover-right img,
+body.animations-paused .clover-toggle img {
+  animation-play-state: paused;
 }
 
 .site-mark:hover {

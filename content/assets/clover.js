@@ -28,4 +28,18 @@
 
     document.body.appendChild(leftColumn);
     document.body.appendChild(rightColumn);
+
+    // Handle toggle button
+    const toggleBtn = document.getElementById('clover-toggle');
+    if (toggleBtn) {
+        // Ensure button image uses the correct src if we found it from the hidden element
+        const btnImg = toggleBtn.querySelector('img');
+        if (btnImg && cloverSrc) {
+            btnImg.src = cloverSrc;
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('animations-paused');
+        });
+    }
 })();
