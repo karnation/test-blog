@@ -178,12 +178,16 @@ main,
   width: 66.67px;
   height: 66.67px;
   transition: transform 0.2s ease;
-  margin-top: 2px;
+  margin-top: 1px;
   flex-shrink: 0;
 }
 
 .clover-toggle:hover {
   transform: scale(1.1);
+}
+
+.clover-toggle:hover img {
+  filter: drop-shadow(0 0 10px rgba(255, 77, 109, 1));
 }
 
 .clover-toggle:active {
