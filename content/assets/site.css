@@ -187,11 +187,11 @@ main,
   /* 
   /* 
      Clamp Logic:
-     MIN: 35px (Overlap point on very small screens)
+     MIN: 10px (Permit deeper overlap on narrow screens <= 320px)
      VAL: 50vw - 150px (Ensures button stays clear of the 67px side border with buffer)
      MAX: 112px (Standard desktop gap next to logo)
   */
-  margin-left: clamp(35px, calc(50vw - 150px), 112px);
+  margin-left: clamp(10px, calc(50vw - 150px), 112px);
   z-index: 20;
 }
 
