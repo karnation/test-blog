@@ -487,7 +487,7 @@ main h1:first-child {
 .clover-left,
 .clover-right {
   position: fixed;
-  top: 2px;
+  top: 4px;
   width: 66.67px;
   height: 100vh;
   pointer-events: none;
