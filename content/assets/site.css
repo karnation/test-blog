@@ -187,19 +187,21 @@ main,
   /* 
      Clamp Logic:
      MIN: 35px (Overlap point on very small screens)
-     VAL: 50vw - 82px (Keep button fully on screen with padding)
-     MAX: 112px (Standard desktop gap next to logo)
+     VAL: 50vw - 80px (Reaches max gap at 400px viewport width)
+     MAX: 120px (Standard desktop gap ~13.5px)
   */
-  margin-left: clamp(35px, calc(50vw - 82px), 112px);
+  margin-left: clamp(35px, calc(50vw - 80px), 120px);
   z-index: 20;
 }
 
-.clover-toggle:hover {
-  transform: scale(1.1);
-}
+@media (hover: hover) {
+  .clover-toggle:hover {
+    transform: scale(1.1);
+  }
 
-.clover-toggle:hover img {
-  filter: drop-shadow(0 0 10px rgba(255, 77, 109, 1));
+  .clover-toggle:hover img {
+    filter: drop-shadow(0 0 10px rgba(255, 77, 109, 1));
+  }
 }
 
 .clover-toggle:active {
@@ -437,19 +439,29 @@ main h1:first-child {
   transition: all 0.3s ease;
 }
 
-.next-article-btn:hover {
-  transform: scale(1.05);
+@media (hover: hover) {
+  .next-article-btn:hover {
+    transform: scale(1.05);
+  }
+
+  .next-article-btn:hover img {
+    filter: drop-shadow(0 0 20px rgba(255, 77, 109, 1));
+    /* Pink glow */
+  }
+
+  .next-article-btn:hover span {
+    transform: scale(1.1) translateX(10px) translateY(2px);
+    opacity: 1;
+    /* Show on hover */
+  }
 }
 
-.next-article-btn:hover img {
-  filter: drop-shadow(0 0 20px rgba(255, 77, 109, 1));
-  /* Pink glow */
+.next-article-btn:active {
+  transform: scale(0.95);
 }
 
-.next-article-btn:hover span {
-  transform: scale(1.1) translateX(10px) translateY(2px);
-  opacity: 1;
-  /* Show on hover */
+.next-article-btn:active img {
+  filter: drop-shadow(0 0 10px rgba(255, 77, 109, 0.6));
 }
 
 
