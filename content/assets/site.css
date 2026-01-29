@@ -205,6 +205,7 @@ body.clovers-hidden .clover-right {
 
 body.clovers-hidden .clover-toggle img {
   filter: hue-rotate(180deg);
+  opacity: 0.8;
 }
 
 .site-mark:hover {
