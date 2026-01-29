@@ -195,7 +195,7 @@ main,
   z-index: 20;
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .clover-toggle:hover {
     transform: scale(1.1);
   }
@@ -440,7 +440,7 @@ main h1:first-child {
   transition: all 0.3s ease;
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .next-article-btn:hover {
     transform: scale(1.05);
   }
