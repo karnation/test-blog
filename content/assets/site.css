@@ -195,6 +195,15 @@ main,
   z-index: 20;
 }
 
+@media (max-width: 768px) {
+  .clover-toggle {
+    top: 2px;
+    right: 2px;
+    left: auto;
+    margin-left: 0;
+  }
+}
+
 @media (hover: hover) and (pointer: fine) {
   .clover-toggle:hover {
     transform: scale(1.1);
