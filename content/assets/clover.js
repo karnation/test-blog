@@ -30,8 +30,10 @@
     document.body.appendChild(rightColumn);
 
     const body = document.body;
-    const mobileQuery = window.matchMedia('(hover: none), (pointer: coarse), (max-width: 768px)');
-    if (mobileQuery.matches) {
+    const isMobile = window.matchMedia
+        ? window.matchMedia('(max-width: 768px)').matches || window.matchMedia('(hover: none)').matches || window.matchMedia('(pointer: coarse)').matches
+        : window.innerWidth <= 768;
+    if (isMobile) {
         body.classList.add('animations-paused');
         body.classList.add('clovers-hidden');
     }
