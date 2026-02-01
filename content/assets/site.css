@@ -601,6 +601,16 @@ main h1:first-child {
   right: 2px;
 }
 
+@media (max-width: 768px) {
+  .clover-left {
+    left: clamp(-40px, calc(7.9vw - 65px), 2px);
+  }
+
+  .clover-right {
+    right: clamp(-40px, calc(7.9vw - 65px), 2px);
+  }
+}
+
 .clover-left img,
 .clover-right img {
   width: 66.67px;
