@@ -1,13 +1,17 @@
 {
-    "thresholds": {
-        "high": 5,
-        "medium": 10,
-        "low": 20
+    "rules": [],
+    "contrastPatterns": [],
+    "punctuationRules": [],
+    "discourseMarkers": [],
+    "weakVerbs": [],
+    "metrics": {
+        "contrastParagraphCap": 0,
+        "emdashLinesPer": 999999,
+        "shortSentenceMax": 0
     },
-    "punctuationRules": [
-        {
-            "label": "question-mark",
-            "enabled": false
-        }
-    ]
+    "thresholds": {
+        "high": 999,
+        "medium": 999,
+        "low": 999
+    }
 }
