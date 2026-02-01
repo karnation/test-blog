@@ -29,6 +29,13 @@
     document.body.appendChild(leftColumn);
     document.body.appendChild(rightColumn);
 
+    const body = document.body;
+    const mobileQuery = window.matchMedia('(hover: none), (pointer: coarse), (max-width: 768px)');
+    if (mobileQuery.matches) {
+        body.classList.add('animations-paused');
+        body.classList.add('clovers-hidden');
+    }
+
     // Handle toggle button
     const toggleBtn = document.getElementById('clover-toggle');
     if (toggleBtn) {
@@ -39,7 +46,6 @@
         }
 
         toggleBtn.addEventListener('click', () => {
-            const body = document.body;
             if (!body.classList.contains('animations-paused') && !body.classList.contains('clovers-hidden')) {
                 // State 0 -> State 1: Pause
                 body.classList.add('animations-paused');
